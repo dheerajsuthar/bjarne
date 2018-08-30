@@ -1,4 +1,4 @@
-#include "owner.h"
+#include "owner_shared.h"
 using namespace std;
 int main(int argc, char const *argv[])
 {
@@ -10,6 +10,11 @@ int main(int argc, char const *argv[])
     owner1.addResource();
     Owner owner2 = owner1;
     cout << (owner1.getResource())->getMessage() << endl;
+    owner2.setName("user Z");
+    owner2.addResource();
+        cout << (owner1.getResource())->getMessage() << endl;
+    cout << (owner2.getResource())->getMessage() << endl;
+
     owner1.setName("userB");
     //replace resource
     owner1.addResource();
